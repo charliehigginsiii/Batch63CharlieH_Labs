@@ -1,4 +1,11 @@
 package String;
+/**
+ * 
+ * @authorofclass Charlie 
+ * @date   Oct 6, 2022
+ */
+//Cogent University Lab 01
+//Author: Jayant Kumar Surya
 class D{
 	public static void main(String[]args) {
 		String s1="cogent";

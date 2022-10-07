@@ -1,5 +1,11 @@
 package Exception;
-
+/**
+ * 
+ * @authorofclass Charlie 
+ * @date   Oct 6, 2022
+ */
+//Cogent University Lab 01
+//Author: Jayant Kumar Surya
 public class Cogent {
 	int test1() {
 		int k=0;
