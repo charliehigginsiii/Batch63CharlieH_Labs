@@ -1,7 +1,7 @@
 package String;
 /**
  * 
- * @authorofclass Charlie 
+ * @authorofclassfile Charlie 
  * @date   Oct 6, 2022
  */
 //Cogent University Lab 01
