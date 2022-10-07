@@ -51,6 +51,16 @@ public class Cogent {
 			System.out.println("Inside Finally block");
 		}
 	}
+	static int test02() {
+		try {
+			
+		}catch(NumberFormatException ex) {
+			return 20;
+		}finally {
+			return 30;
+		}
+		//return 40;
+	}
 	public static void main(String[]args) throws ClassNotFoundException{
 		//1
 		try {
@@ -207,19 +217,64 @@ public class Cogent {
 		}
 		System.out.println(2);
 		//19
-		try {
+		/*try {
 			return; 
 		}finally {
 			System.out.println("Finally");
-		}
-		/*System.out.println();
+		}*/
 		//20
 		try {
 			System.out.println(1);
 			int i=10/0;
 		}catch(NullPointerException ex) {
-			
-		}*/
+			System.out.println(4);
+		}
+		try {
+			int i=23/0;
+		}catch(ArithmeticException ex) {
+			System.out.println(5);
+		}finally {
+			System.out.println(6);
+		}
+		System.out.println(7);
+		//21
+		System.out.println(1);
+		System.out.println(Cogent.test02());
+		System.out.println(2);
+		//22
+		try {
+			System.out.println(1);
+			String s=null;
+			System.out.println(s.length());
+		}catch(NullPointerException ex) {
+			System.out.println(4);
+		}
+		try {
+			int i=23/0;
+			System.out.println(5);
+		}finally {
+			System.out.println(6);
+		}
+		System.out.println(7);
+		//23
+		try {
+			int a[]=new int[5];
+			a[5]=30/0;
+		}catch(ArithmeticException e) {
+			System.out.println("task1 is completed");
+		}catch(ArrayIndexOutOfBoundsException e) {
+			System.out.println("task 2 completed");
+		}catch(Exception e) {
+			System.out.println("common task completed");
+		}
+		System.out.println("rest of the code");
+	//24
+		try {
+			int a[]=new int[5];
+			a[5]=30/0;
+		}catch(Exception e) {
+			System.out.println("Common task completed");
+		}
 	}
 	public static void badMethod() {
 		throw new RuntimeException();
