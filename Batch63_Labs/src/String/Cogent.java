@@ -16,18 +16,18 @@ class D{
 }
 class I{
 	public static void main(String[]args) {
-		String s01="cogent";
-		String s02="cogent";
-		String s3=new String(s01);
-		String s4=new String(s02);
+		String s1="cogent";
+		String s2="cogent";
+		String s3=new String(s1);
+		String s4=new String(s2);
 		System.out.println("--------------");
-		System.out.println(s01==s02);
+		System.out.println(s1==s2);
 		System.out.println(s3==s4);
-		System.out.println(s01==s4);
+		System.out.println(s1==s4);
 		System.out.println(s3==s4);
 		System.out.println("--------------");
-		System.out.println(s01.equals(s02));
-		System.out.println(s01.equals(s3));
+		System.out.println(s1.equals(s2));
+		System.out.println(s1.equals(s3));
 	}
 }
 class K{
@@ -73,7 +73,7 @@ class Z{
 		System.out.println("--------");
 		System.out.println(s1.charAt(0));
 		System.out.println(s1.charAt(3));
-		System.out.println(s1.charAt(9));
+		System.out.println(s1.charAt(8));
 	}
 }
 class A{
@@ -148,7 +148,7 @@ class P{
 		
 	}
 }
-class B{
+class T1{
 	public static void main(String[]args) {
 		StringBuffer sb=new StringBuffer();
 		sb.append("abc");
@@ -160,12 +160,50 @@ class B{
 		System.out.println(sb.deleteCharAt(4));
 	}
 }
-class F{
+class A1{
 	public static void main(String[]args) {
 		System.out.printf("hello %s","india");
 		System.out.println("");
 		String s1="indian";
 		System.out.printf("hi %s", s1);
+	}
+}
+class I1{
+	public static void main(String[]args) {
+		String s1="hello";
+		String s2="hello";
+		String s3=new String("hello");
+		String s4=new String("hello");
+		System.out.println(s1==s2);
+		System.out.println(s1==s3);
+		System.out.println(s3==s4);
+	}
+}
+class reverseString{
+	public static void main(String[]args) {
+		String s1="cogent technology";
+		char c[]=new char[5];
+		System.out.printf("given string: %s", s1);
+		System.out.printf("\nlength of string: %d",s1.length());
+		System.out.println("\n the reversed string is: ");
+		for(int count=s1.length()-1;count>=0;count--) {
+			System.out.printf("%s", s1.charAt(count));
+		}
+	}
+}
+class H1{
+	public static void main(String[]args) {
+		String s1=new String("cogent technology");
+		System.out.println(s1.substring(2,8));
+		System.out.println(s1.length());
+	}
+}
+class E1{
+	public static void main(String[]args) {
+		String s1="abc 123";
+		s1.trim();
+		String s2="abc 123";
+		System.out.println(s1.equals(s2));
 	}
 }
 public class Cogent {
@@ -183,10 +221,12 @@ public class Cogent {
 		J.main(args);
 		M.main(args);	
 		P.main(args);
-		//15
-		B.main(args);
-		//16
-		F.main(args);
+		T1.main(args);
+		A1.main(args);
+		reverseString.main(args);
+		I1.main(args);
+		H1.main(args);
+		E1.main(args);
 		
 	}
 }
