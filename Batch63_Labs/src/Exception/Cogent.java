@@ -24,6 +24,33 @@ public class Cogent {
 			return 30;
 		}
 	}
+	static int test() {
+		try {
+			return 10;
+		}catch(NumberFormatException ex) {
+			return 20;
+		}finally {
+			return 30;
+		}
+		//return 40;
+	}
+	static int test01() {
+		try {
+			
+		}catch(NumberFormatException ex) {
+			return 20;
+		}finally{
+			
+		}
+		return 40;
+	}
+	public static int test001() {
+		try {
+			return 0;
+		}finally {
+			System.out.println("Inside Finally block");
+		}
+	}
 	public static void main(String[]args) throws ClassNotFoundException{
 		//1
 		try {
@@ -110,7 +137,93 @@ public class Cogent {
 	//9
 	new Cogent().test1();
 	new Cogent().test2();
+	//10
+	try {
+		for(int i=5;i>=0;i--) {
+			System.out.println(10/i);
+		}
+	}catch(Exception ex) {
+		System.out.println("Exception Message: "+ex.getMessage());
+		ex.printStackTrace();
+	}
+	System.out.println("After for loop...");
+	//11
+	try {
+		int i=10/0;
+	}catch(Exception ex) {
+		System.out.println("Inside 1st catch Block");
+	}finally {
+		System.out.println("Inside 1st finally Block");
+	}
+	try {
+		int i=10/10;
+	}catch(Exception ex) {
+		System.out.println("Inside 2nd catch Block");
+	}finally {
+		System.out.println("Inside 2nd finally block");
+	}
+	//12
+	String languages[]= {"C","C++","Java",".Net","C#"};
+	try {
+		for(int i=1;i<=5;i++) {
+			System.out.println(languages[i]);
+		}
+	}catch(Exception e) {
+		System.out.println(e);
+	}
+	//13
+		System.out.println(1);
+		System.out.println(Cogent.test());
+		System.out.println(2);
+	//14
+		System.out.println(1);
+		System.out.println(Cogent.test01());
+		System.out.println(2);
+	//15
+		System.out.println(Cogent.test001());
+	//16
+		try {
+			long data[]=new long[1000000000];
+		}catch(Exception e) {
+			System.out.println(e);
+		}finally {
+			System.out.println("finally block will execute always");
+		}
+	//17
+		try{
+			Cogent.badMethod();
+		}catch(RuntimeException ex) {
+			System.out.print("B");
+		}catch(Exception ex1) {
+			System.out.println("C");
+		}finally {
+			System.out.println("D");
+		}
+		System.out.println("E");
+		//18
+		System.out.println(1);
+		if(true) {
+			throw new ClassNotFoundException();
+		}
+		System.out.println(2);
+		//19
+		try {
+			return; 
+		}finally {
+			System.out.println("Finally");
+		}
+		/*System.out.println();
+		//20
+		try {
+			System.out.println(1);
+			int i=10/0;
+		}catch(NullPointerException ex) {
+			
+		}*/
+	}
+	public static void badMethod() {
+		throw new RuntimeException();
+	}
 	
-}
-
+	
 }
